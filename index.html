@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My E-Commerce Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  
+    <header>
+        <nav class="navbar">
+            <div class="logo">ShopEase</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="cart-icon">
+                    <a href="#" id="cart-btn">Cart (<span id="cart-count">0</span>)</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+ 
+    <section id="home" class="hero-slider">
+        <div class="slides">
+            <div class="slide active">
+                <img src="./images/banner.jpg" alt="Slide 1">
+                <div class="slide-text">
+                    <h2>Explore Amazing Destinations</h2>
+                    <button>Shop Now</button>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="./images/second slide.jpg" alt="Slide 2">
+                <div class="slide-text">
+                    <h2>Discover Top Products</h2>
+                    <button>Shop Now</button>
+                </div>
+            </div>
+            <div class="slide">
+              <img src="./images/3 slide.jpg" alt="Slide 3">
+                <div class="slide-text">
+                    <h2>Best Deals For You</h2>
+                    <button>Shop Now</button>
+                </div>
+            </div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </section>
+
+ 
+    <section id="products" class="products">
+        <h2>Our Products</h2>
+        <div class="product-container">
+            <div class="product-card">
+                <img src="./images/product 1.jpg" alt="Hand Bag">
+                <h3>Hand Bag</h3>
+                <p>$49.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="./images/product 2.jpg" alt="Smart Watch">
+                <h3>Smart Watch</h3>
+                <p>$59.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="./images/product 3.jpg" alt="Bluetooth Earbuds">
+                <h3>Bluetooth Earbuds</h3>
+                <p>$29.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="./images/product 4.jpg" alt="Ring">
+                <h3>Ring</h3>
+                <p>$39.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="./images/product 5.jpg" alt="Sneakers">
+                <h3>Sneakers</h3>
+                <p>$39.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="./images/product 6.jpg" alt="Clothes">
+                <h3>Clothes</h3>
+                <p>$39.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: $<span id="cart-total">0</span></p>
+            <button id="checkout-btn">Checkout</button>
+            <button id="close-cart">Close</button>
+        </div>
+    </section>
+
+   
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>We offer the best products with amazing deals. Our goal is to make online shopping simple, fast, and enjoyable for everyone.</p>
+    </section>
+
+  
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    
+    <footer>
+        <p>&copy; 2025 ShopEase. All Rights Reserved.</p>
+        <div class="social-icons">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
