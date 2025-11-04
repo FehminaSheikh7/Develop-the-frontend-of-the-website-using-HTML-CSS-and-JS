@@ -94,6 +94,15 @@ header {
     margin-bottom: 30px;
 }
 
+.slider .prev, 
+.slider .next {
+  position: absolute;
+  top: 50% !important;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+}
+
 .slider .btn {
     padding: 15px 40px;
     border-radius: 7px;
@@ -132,7 +141,12 @@ header {
     height: auto;
     object-fit: cover;
 }
-
+.slide-text {
+  background: none !important;
+  backdrop-filter: none !important;
+  z-index: 10;
+  position: relative;
+}
 
 
 .hero-slider button {
