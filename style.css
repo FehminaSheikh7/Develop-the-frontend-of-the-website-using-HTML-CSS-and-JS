@@ -65,11 +65,56 @@ header {
     margin: 4px 0;
 }
 
+.slider {
+    width: 100%;
+    min-height: 100vh; /* ✅ slider full height */
+    padding: 80px 0;   /* ✅ content breathe kare */
+    display: flex;
+    align-items: center; /* ✅ vertically center */
+    overflow: visible;   /* ✅ text/button cut fix */
+}
+.slider .container {
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.slider-content {
+    max-width: 500px; /* ✅ width define */
+    padding-left: 30px; /* ✅ space from left */
+}
 
+.slider h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.slider .p1 {
+    margin-bottom: 30px;
+}
+
+.slider .btn {
+    padding: 15px 40px;
+    border-radius: 7px;
+    background-color: green;
+    color: white;
+    border-color: none;
+    margin-top: 20px; /* ✅ space under text */
+}
+
+.slider .btn {
+    padding: 15px 40px;
+    border-radius: 7px;
+    background-color: green;
+    color: white;
+    border-color: none;
+    margin-top: 20px; /* ✅ space under text */
+}
 .hero-slider {
     position: relative;
-    overflow: hidden;
-    height: 70vh;
+    overflow: visible;
+    height: auto;
 }
 
 .hero-slider .slides {
@@ -84,20 +129,11 @@ header {
 
 .hero-slider .slide img {
     width: 100%;
-    height: 70vh;
+    height: auto;
     object-fit: cover;
-    transition: transform 0.5s ease;
 }
 
-.hero-slider .slide-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    text-align: center;
-    animation: fadeIn 1s ease forwards;
-}
+
 
 .hero-slider button {
     margin-top: 1rem;
@@ -128,16 +164,18 @@ header {
 
 
 .slide-text {
-    color: black; 
-    text-align: center; 
-    position: absolute; 
-    top: 50%;
+    position: absolute;
+    bottom: 15%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
+    color: #fff;
+    text-align: center;
+    padding: 10px 15px;
+    backdrop-filter: blur(3px);
 }
 
 .hero-slider .slide-text h2 {
-    color: black;
+    color: #fff;
 }
 
 
@@ -385,5 +423,46 @@ footer .social-icons a:hover {
 
     .product-card img {
         height: 150px;
+    }
+}
+
+@media (max-width: 600px) {
+  .slide-text {
+      bottom: 10%;
+      font-size: 1rem;
+      padding: 8px 10px;
+  }
+
+  .prev, .next {
+      font-size: 1.5rem;
+      padding: 0.3rem 0.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+    .slider .container {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 60px;
+    }
+
+    .slider-content {
+        padding-left: 0;
+        max-width: 100%;
+    }
+
+    .slider h1 {
+        font-size: 32px;
+    }
+
+    .slider .btn {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+
+    .slider-image img {
+        width: 80%;
+        max-width: 330px;
+        margin-top: 20px;
     }
 }
